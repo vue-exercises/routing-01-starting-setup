@@ -53,6 +53,11 @@ router.beforeEach(function(to, from, next) {
   console.log(to, from);
   next();
 });
+
+router.afterEach(function(to, from) {
+  console.log('Global aftereach');
+  console.log(to, from);
+});
 const app = createApp(App);
 
 app.use(router);
